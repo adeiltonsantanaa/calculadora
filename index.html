@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+    <script src="js/principal.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sumir").click(function() {
+                $(".calculadora").hide();
+            });
+            $("#show").click(function() {
+                $(".calculadora").show();
+            });
+        });
+    </script>
+</head>
+
+<body background="imagens/Movement_Light_Long_Exposure_2020_Abstract_Design Wallpaper_1920x1080[10wallpaper.com].jpg">
+    <div class="fundo_pagina">
+        <div class="sumir_aparecer">
+            <td><button class="botao botao_zero" id="show">Aparecer</button></td>
+        </div>
+        <div class="calculadora">
+
+            <h1>Calculadora</h1>
+            <p id="numEscritos">Último Resultado =</p>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td colspan="2"><button class="botao botao_zero" id="sumir">Sumir</button></td>
+                    <td colspan="2"><button class="botao botao_zero" id="limparUltimaConta" onclick="limparUltimaConta()">Limpar Último Resultado</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="limpar() ">C</button></td>
+                    <td><button class="botao" onclick="apagarNumEsquerda() "><</button></td>
+                    <td><button class="botao" onclick="insert('/') ">/</button></td>
+                    <td><button class="botao botao_multiplicacao" onclick="insert('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <td><button class="botao" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <td><button class="botao" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao botao_calcular" style="height: 106px;" onclick="calcular(), ultimoResultado()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao botao_zero" onclick="insert('0')">0</button></td>
+                    <td colspan="1"><button class="botao botao_ponto" onclick="insert('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
