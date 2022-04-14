@@ -7,6 +7,10 @@ function limpar() {
     document.getElementById('resultado').innerHTML = "";
     //document.getElementById('numEscritos').innerHTML = "";
 }
+function limpartudo() {
+    document.getElementById('resultado').innerHTML = "";
+    document.getElementById('numEscritos').innerHTML = "Último Resultado =";
+}
 
 function limparUltimaConta() {
     document.getElementById('numEscritos').innerHTML = "Último Resultado =";
