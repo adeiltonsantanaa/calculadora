@@ -34,7 +34,7 @@ function calcular() {
         document.getElementById('resultado').innerHTML = eval(resultado);
 
     } else {
-        document.getElementById('resultado').innerHTML = "Digite Alguma Operação Antes!!!";
+        alert("Digite um número antes de somar!!")
 
     }
 }
