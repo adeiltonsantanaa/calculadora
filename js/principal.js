@@ -7,6 +7,10 @@ function limpar() {
     document.getElementById('resultado').innerHTML = "";
     //document.getElementById('numEscritos').innerHTML = "";
 }
+function limpartudo() {
+    document.getElementById('resultado').innerHTML = "";
+    document.getElementById('numEscritos').innerHTML = "Último Resultado =";
+}
 
 function limparUltimaConta() {
     document.getElementById('numEscritos').innerHTML = "Último Resultado =";
@@ -30,7 +34,7 @@ function calcular() {
         document.getElementById('resultado').innerHTML = eval(resultado);
 
     } else {
-        document.getElementById('resultado').innerHTML = "Digite Alguma Operação Antes!!!";
+        alert("Digite um número antes de somar!!")
 
     }
 }
